@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Alata', sans-serif;
+}
+
+/* 1 SEKCJA */
+.top {
+    position: absolute;
+    /* kiedy jest absolute to nie działaj margin auto*/
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* powyzej funkcja 4 linijki powoduje wklejenie headerapod baner */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 16px 0;
+}
+
+.top-menu {
+    display: flex;
+    list-style: none;
+    gap: 14px;
+}
+
+.top-item a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url("./images/desktop/image-hero.jpg");
+    min-height: 600px;
+    background-size: cover;
+    /* gdy dubluje rysunek by wypelnic tło */
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+
+.banner-tittle {
+    color: white;
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    /* funkcja dla liter drukowanych */
+    font-weight: 100;
+    border: 2px solid white;
+    width: 50%;
+    padding: 16px;
+}
+
+/* 2 SEKCJA */
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10% 10% 10% 10%;
+}
+
+.VRtext1-2 {
+    text-align: center;
+    padding-bottom: 75px;
+    position: relative;
+    top: 130px;
+    right: 150px;
+    background-color: white;
+    width: 40%;
+    align-items: center;
+    margin: 0% 3% 0% 3%;
+}
+
+.photo2 {
+    width: 60%;
+}
+
+.text1 {
+    text-align: center;
+    padding: 8px;
+    margin: 20% 3% 0% 3%;
+    font-weight: 100;
+    font-size: 2REM;
+}
+
+.text2 {
+    margin: 0% 3% 3% 3%;
+    font-size: 0.8REM;
+    font-weight: 100;
+    text-align: justify;
+    padding: 8px;
+}
+
+/* 3 SEKCJA */
+.projects {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-grow: 1;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.projects-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-btn {
+    border: 2px solid black;
+    background-color: transparent;
+    padding: 8px 12px;
+    min-width: 120px;
+    text-transform: uppercase;
+}
+
+.projects-tittle {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.projects-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.project {
+    position: relative;
+}
+
+.project-tittle {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* 4 sekcja STOPKA */
+.footer {
+    background-color: black;
+    padding: 50px 0;
+    margin-top: 10%;
+    align-items: center;
+    width: 80;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-item {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-down {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.bottom-menu {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+
+}
+
+.bottom-item a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.end-text {
+    color: rgb(189, 184, 184);
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* SKALOWANIE DO MNIEJSZYCH URZĄDZEŃ */
+/* SEKCJA 1 */
+@media(max-width:1200px) {
+    .banner-tittle {
+        width: 75%;
+    }
+}
+@media(max-width:992px) {
+    .banner-tittle {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    .top nav {          /* hamburger */
+        display: none;
+    }
+}
+
+/* SEKCJA 2 */
+@media(max-width:1200px) {
+    .text1 {
+        font-size: 3vmin;
+    }
+
+    .text2 {
+        font-size: 1.7vmin;
+    }
+
+    .VRtext1-2 {
+        top: 80px;
+        padding: 50px;
+        right: 80px;
+    }
+}
+
+@media(max-width:1000px) {
+    .section2{
+        flex-direction: column;    
+    }
+    .VRtext1-2 {
+        padding:0px;
+        margin: 0;
+        position: static;
+        width: initial;
+    }
+    .text1 {
+        margin: 0;
+    }
+}
+
+@media(max-width:700px) {
+    .text1 {
+        font-size: 1.5vmin;
+    }
+
+    .text2 {
+        font-size: 1vmin;
+    }
+
+    .VRtext1-2 {
+        top: 80px;
+        padding:0px;
+        right: 80px;
+    }
+}
+
+/* SEKCJA 3 */
+@media(max-width:992px){
+    .projects-wrapper {
+        flex-direction: column;
+    }
+}
+
