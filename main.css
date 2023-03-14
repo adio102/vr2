@@ -76,7 +76,7 @@ h6 {
 }
 
 /* 2 SEKCJA */
-.section2 {
+.sekcja2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -267,7 +267,7 @@ h6 {
 }
 
 @media(max-width:1000px) {
-    .section2{
+    .sekcja2{
         flex-direction: column;    
     }
     .VRtext1-2 {
