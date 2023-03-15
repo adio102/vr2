@@ -229,6 +229,22 @@ h6 {
     background-color: transparent;
 }
 
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background-color: rgb(41, 40, 40) ;
+    width: 280px;
+    height: 100vh;
+    padding: 30px;
+}
+
+.mobile-nav .top-menu {
+    display: flex;
+    flex-direction: column;
+}
+
 /* SKALOWANIE DO MNIEJSZYCH URZĄDZEŃ */
 /* SEKCJA 1 */
 @media(max-width:1200px) {
@@ -246,6 +262,11 @@ h6 {
     }
     .top nav {          /* hamburger */
         display: none;
+    }
+    .mobile-nav{
+        display: block;
+        transform: translateX(-102%);
+        transition: transform 0.4s;
     }
 }
 
@@ -304,3 +325,6 @@ h6 {
     }
 }
 
+.showMenu {
+    transform: translateX(0);
+}
